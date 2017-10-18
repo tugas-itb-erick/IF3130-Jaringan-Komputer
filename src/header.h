@@ -25,6 +25,8 @@
 #define BYTESIZE 256 /* The maximum value of a byte */
 #define MAXLEN 1024 /* Maximum messages length */
 
+void error(char*);
+
 typedef unsigned char Byte;
 
 typedef struct QTYPE
@@ -36,19 +38,20 @@ typedef struct QTYPE
 	Byte *data;
 } QTYPE;
 
-typedef struct SEGMENT {
+typedef struct Segment {
 	Byte soh;
 	unsigned int seqnum;
 	Byte stx;
 	Byte data;
 	Byte etx;
 	Byte checksum;
-} SEGMENT;
+} Segment;
 
-typedef struct ACKPKG {
+typedef struct Ack {
 	Byte ack;
-	unsigned int msgno;
+	unsigned int nextSeqnum;
+	Byte advWinsize;
 	Byte checksum;
-} ACKPKG;
+} Ack;
 
 #endif

@@ -1,8 +1,8 @@
 all: 
-	make bin/client bin/server
+	make bin/sendfile bin/recvfile
 
-bin/client: src/client.cpp
-	g++ -pthread -o bin/client src/client.cpp
+bin/sendfile: src/sender.cpp src/sendWindow.cpp src/header.cpp src/sendWindow.h src/header.h
+	g++ -pthread -o bin/sendfile src/sender.cpp src/sendWindow.cpp src/header.cpp
 
-bin/server: src/server.cpp
-	g++ -pthread -o bin/server src/server.cpp
+bin/recvfile: src/receiver.cpp src/recvWindow.cpp src/header.cpp src/recvWindow.h src/header.h
+	g++ -pthread -o bin/recvfile src/receiver.cpp src/recvWindow.cpp src/header.cpp
