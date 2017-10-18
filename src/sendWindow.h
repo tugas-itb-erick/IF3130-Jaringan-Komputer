@@ -20,10 +20,12 @@
 
 using namespace std;
 
+#define DEFAULT_BUFFSIZE 256
+
 typedef struct SendWindow {
 	unsigned int count;
-	unsigned int front;
-	unsigned int rear;
+	unsigned int head;
+	unsigned int back;
 	unsigned int maxsize;
 
 	Byte *data;
@@ -38,7 +40,7 @@ void sendSegment(Byte seqnum, Byte data, int sock, struct sockaddr_in receiverAd
 //Add data to back of window
 void putBack(Byte data, SendWindow* window);
 
-//Remove front data from window
+//Remove head data from window
 void delHead(SendWindow* window);
 
 //Get string of CRC from bitstring

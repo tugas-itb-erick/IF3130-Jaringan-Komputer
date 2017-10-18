@@ -14,6 +14,15 @@ void sendACK(Byte ack, int sock, struct sockaddr_in senderAddr, int slen, unsign
     }
 }
 
+void increaseWindow(RecvWindow* window){
+    window->received[window->back] = false;
+    window->back = (window->back + 1) % window->maxsize;
+}
+
+void decreaseWindow(RecvWindow* window){
+    window->head = (window->head + 1) % window->maxsize;
+}
+
 string createCRC(string bitStr) {
     static char result[8];
     char crc[7];
@@ -64,23 +73,14 @@ bool isChecksumValid(Segment msg){
 }
 
 bool isFrameValid(Segment msg){
-    return (msg.soh == SOH && msg.seqnum < MAXRECVBUFF && msg.stx == STX && 
+    return (msg.soh == SOH && msg.seqnum < DEFAULT_BUFFSIZE && msg.stx == STX && 
         msg.etx == ETX && isChecksumValid(msg));
 }
 
-void increaseWindow(RecvWindow* window){
-    window->received[window->rear] = false;
-    window->rear = (window->rear + 1) % window->maxsize;
-}
-
-void decreaseWindow(RecvWindow* window){
-    window->front = (window->front + 1) % window->maxsize;
-}
-
 // Insert data from window into process Buffer
-void insertIntoProcessBuf(Byte data, QTYPE *queue, int sockfd, struct sockaddr_in sender_addr, int slen){
-    queue->data[queue->rear++] = data;
-    queue->rear %= queue->maxsize;
+void insertIntoProcessBuf(Byte data, QTYPE *queue, int sock, struct sockaddr_in senderAddr, int slen){
+    queue->data[queue->back++] = data;
+    queue->back %= queue->maxsize;
     queue->count++;
 
     // Sending XON and XOFF not implemented yet
@@ -89,8 +89,8 @@ void insertIntoProcessBuf(Byte data, QTYPE *queue, int sockfd, struct sockaddr_i
     //  cout<<"Buffer > minimum upperlimit. Sending XOFF"<<endl;
     //  Byte xoff;
     //  xoff = (Byte) XOFF;
-    //  if(sendto(sockfd, &xoff, sizeof(Byte), 0, 
-    //      (struct sockaddr *) &sender_addr, slen) == -1)
+    //  if(sendto(sock, &xoff, sizeof(Byte), 0, 
+    //      (struct sockaddr *) &senderAddr, slen) == -1)
     //  {
     //      cout<<"Sending XOFF failed"<<endl;
     //  }

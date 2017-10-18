@@ -1,9 +1,10 @@
-/*
-* File : header.h
-*/
+// File : header.h
+
 
 #ifndef _HEADER_H_
 #define _HEADER_H_
+
+#include <string>
 
 /* ASCII Constants */
 #define SOH 1
@@ -25,15 +26,15 @@
 #define BYTESIZE 256 /* The maximum value of a byte */
 #define MAXLEN 1024 /* Maximum messages length */
 
-void error(char*);
+void error(std::string msg);
 
 typedef unsigned char Byte;
 
 typedef struct QTYPE
 {
 	unsigned int count;
-	unsigned int front;
-	unsigned int rear;
+	unsigned int head;
+	unsigned int back;
 	unsigned int maxsize;
 	Byte *data;
 } QTYPE;

@@ -16,18 +16,17 @@
 #include <cstring>
 #include "header.h"
 
-#define MAXRECVBUFF 10 
+#define DEFAULT_BUFFSIZE 256 
 
 using namespace std;
 
-typedef struct RecvWindow
-{
-	//Front and rear of the window
-	unsigned int front;
-	unsigned int rear;
+typedef struct RecvWindow {
+	unsigned int head;
+	unsigned int back;
 	unsigned int maxsize;
+
 	Byte *data;
-	bool *received; //Whether the frame has been received or not (include error checking)
+	bool *received;
 } RecvWindow;
 
 void sendACK(Byte ack, int sock, struct sockaddr_in senderAddr, int slen, unsigned int seqnum, int checksum);

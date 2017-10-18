@@ -19,16 +19,16 @@ void sendSegment(Byte segnum, Byte data, int sock, struct sockaddr_in receiverAd
 }
 
 void putBack(Byte data, SendWindow* window) {
-    unsigned int rear = window->rear;
-    window->data[rear] = data;
-    window->ack[rear] = false;
-    window->startTime[rear] = -1;
-    window->rear = (rear + 1) % window->maxsize;
+    unsigned int back = window->back;
+    window->data[back] = data;
+    window->ack[back] = false;
+    window->startTime[back] = -1;
+    window->back = (back + 1) % window->maxsize;
     window->count++;
 }
 
 void delHead(SendWindow* window) {
-    window->front = (window->front + 1) % window->maxsize;
+    window->head = (window->head + 1) % window->maxsize;
     window->count--;
 }
 

@@ -18,7 +18,7 @@ using namespace std;
 #define LOCALHOST "127.0.0.9"
 
 /* Delay to adjust speed of consuming buffer, in seconds */
-#define DELAY 500
+#define DELAY 100
 /* Define receive buffer size */
 #define RXQSIZE 8
 /* Define minimum upperlimit */
@@ -32,11 +32,10 @@ QTYPE *rxq = &rcvq;
 bool send_xoff = false;
 
 /* Arguments */
-char* filename = "output.txt";
-int windowsize;
-char* buff;
-int buffsize = 256;
-int port = 8080;
+char* filename;
+unsigned int windowsize;
+unsigned int buffsize;
+int port;
 
 /* Socket */
 struct sockaddr_in recvAddr, senderAddr;
@@ -46,9 +45,7 @@ int byteCounter = 0; //Number of bytes received
 int byteConsumed = 0;
 
 // Window
-Byte buf[MAXRECVBUFF];
-bool received[MAXRECVBUFF];
-RecvWindow window = {0, MAXRECVBUFF/2 - 1, MAXRECVBUFF, buf, received};
+RecvWindow window;
 
 /* Functions declaration */
 static Byte rcvchar(int sockfd, QTYPE *queue);
@@ -56,8 +53,22 @@ static Byte q_get(QTYPE *);
 void* consumeBuffer(void*);
 
 /* Create socket and bind */
-void setup() {
-    buff = (char *)malloc(sizeof(*buff) * buffsize);
+void setup(int argc, char* argv[]) {
+    if (argc < 5) {
+        printf("Usage: ./recvfile <filename> <windowsize> <buffersize> <port>\n");
+        exit(EXIT_FAILURE);
+    }
+    
+    filename = argv[1];
+    windowsize = atoi(argv[2]);
+    buffsize = DEFAULT_BUFFSIZE;
+    port = atoi(argv[4]);
+
+    Byte* buff;
+    bool* received;
+    buff = (Byte *) malloc(sizeof(*buff) * buffsize);
+    received = (bool *) malloc(sizeof(*received) * buffsize);
+    window = {0, buffsize/2 - 1, windowsize, buff, received};
 
     // Creating UDP socket
     if ((udpSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
@@ -77,18 +88,7 @@ void setup() {
 }
 
 int main(int argc, char* argv[]) {
-    /*if (argc < 5) {
-        printf("Usage: ./recvfile <filename> <windowsize> <buffersize> <port>\n");
-        exit(EXIT_FAILURE);
-    }
-    
-    filename = argv[1];
-    windowsize = atoi(argv[2]);
-    buffsize = atoi(argv[3]);
-    port = atoi(argv[4]);
-    */
-
-    setup();
+    setup(argc, argv);
 
 	/* Create child thread, for consuming buffer */
 	pthread_t child_thread;
@@ -131,8 +131,8 @@ int main(int argc, char* argv[]) {
 	    	sendACK(NAK, udpSocket, senderAddr, slen, message.seqnum, message.checksum);
 	    }
 
-	    for(int i = window.front; i != window.rear; i = (i+1)%window.maxsize){
-	    	if(i == window.front && window.received[i]){
+	    for(int i = window.head; i != window.back; i = (i+1)%window.maxsize){
+	    	if(i == window.head && window.received[i]){
 	    		insertIntoProcessBuf(window.data[i], rxq, udpSocket, senderAddr, slen);
 	    		decreaseWindow(&window);
 	    		increaseWindow(&window);
@@ -160,10 +160,10 @@ static Byte q_get(QTYPE *queue) {
 	Retrieve data from buffer, save it to "current" and "data"
 	If the number of characters in the receive buffer is below certain
 	level, then send XON.
-	Increment front index and check for wraparound.
+	Increment head index and check for wraparound.
 	*/
-	Byte c = queue->data[queue->front++];
-	queue->front %= queue->maxsize;
+	Byte c = queue->data[queue->head++];
+	queue->head %= queue->maxsize;
 	queue->count--;
 
 	if(c != Endfile){
@@ -191,6 +191,6 @@ void* consumeBuffer(void*){
 	//Consume Buffer with delay
 	while(true){
 		q_get(rxq);
-		usleep(DELAY * 1000); //usleep parameter is useconds
+		usleep((rand()%5+1) * DELAY * 1000); //usleep parameter is useconds
 	}
 }

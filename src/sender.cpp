@@ -14,37 +14,47 @@
 #include "sendWindow.h"
 using namespace std;
 
-#define MAXTRANSBUFF 10
 #define TIMEOUT 1000 // in ms
 
 /* Arguments */
-char* filename = "input.txt";
-int windowsize = MAXTRANSBUFF;
-int buffsize = 256;
-char* buff;
-char* destination_ip = "127.0.0.1";
-int destination_port = 8080;
+char* filename;
+unsigned int windowsize;
+unsigned int buffsize;
+char* hostname;
+int destination_port;
 
 /* Socket */
 struct sockaddr_in recvAddr;
 int sock, slen = sizeof(recvAddr);
 static Byte lastReceivedChar;
-socklen_t addrSize;
 
-Byte buf[MAXTRANSBUFF];
-bool ack[MAXTRANSBUFF];
-clock_t startTime[MAXTRANSBUFF];
-SendWindow window = {0,0,0, MAXTRANSBUFF, buf, ack, startTime};
+/* Window */
+SendWindow window;
 
-
-
-
+/* Function Declarations */
 void* receiveResponse(void*);
 void* receiveMessage(void*);
 
-/* Create socket and connection */
-void setup() {
-    buff = (char *)malloc(sizeof(*buff) * buffsize);
+/* Create socket and configuration */
+void setup(int argc, char* argv[]) {
+	if (argc < 6) {
+        printf("Usage: ./sendfile <filename> <windowsize> <buffersize> "
+        "<hostname> <destination_port>\n");
+        exit(EXIT_FAILURE);
+    }
+    filename = argv[1];
+    windowsize = atoi(argv[2]);
+    buffsize = DEFAULT_BUFFSIZE;
+    hostname = argv[4];
+	destination_port = atoi(argv[5]);
+	
+	Byte* buff;
+	bool* ack;
+	clock_t* startTime;
+	buff = (Byte *) malloc(sizeof(*buff) * buffsize);
+	ack = (bool *) malloc(sizeof(*ack) * buffsize);
+	startTime = (clock_t *) malloc(sizeof(*startTime) * buffsize);
+	window = {0,0,0, windowsize, buff, ack, startTime};
 
     // Creating UDP socket
     if ((sock = socket(PF_INET, SOCK_DGRAM, 0)) < 0) {
@@ -54,47 +64,34 @@ void setup() {
     // Configure settings in address struct
     recvAddr.sin_family = AF_INET;
     recvAddr.sin_port = htons(destination_port);
-    recvAddr.sin_addr.s_addr = inet_addr(destination_ip);
-    memset(recvAddr.sin_zero, '\0', sizeof(recvAddr.sin_zero)); 
-      
-    // Initialize size variable to be used later on
-    addrSize = sizeof(recvAddr);
+	memset(recvAddr.sin_zero, '\0', sizeof(recvAddr.sin_zero));
+
+	struct hostent* pHostInfo;
+	long nHostAddress;
+	pHostInfo = gethostbyname(hostname);
+	if(!pHostInfo){
+		error("Could not resolve host name");
+	}
+	memcpy(&recvAddr.sin_addr, pHostInfo->h_addr_list[0], pHostInfo->h_length);
 }
 
 int main(int argc, char* argv[]) {
-    /*if (argc < 6) {
-        printf("Usage: ./sendfile <filename> <windowsize> <buffersize> "
-        "<hostname> <destination_port>\n");
-        exit(EXIT_FAILURE);
-    }
-
-    filename = argv[1];
-    windowsize = atoi(argv[2]);
-    buffsize = atoi(argv[3]);
-    destination_ip = argv[4];
-    destination_port = atoi(argv[5]);*/
-
-    setup();
+    setup(argc, argv);
 
 	// Create thread for receiving response
 	pthread_t recvResponse_thread;
-	if(pthread_create(&recvResponse_thread, NULL, &receiveResponse, NULL) < 0){
-		cout<<"Error creating thread"<<endl;
-		exit(EXIT_FAILURE);
+	if(pthread_create(&recvResponse_thread, NULL, &receiveResponse, NULL) < 0) {
+		error("Error when creating thread");
 	}
 
-	//Main thread
-	//Keep sending bytes until EOF while not XOFF
 	FILE *fp;
 	fp = fopen(filename, "r");
 
 	if(fp == NULL){
-		cout<<"Text File not found, terminating..."<<endl;
-		exit(EXIT_FAILURE);
+		error("File not found, stopping...");
 	}
 
 	Byte ch;
-	int msgno = 0;
 	bool endfile = false;
 	while(true){
 		// Read message and put to window
@@ -109,7 +106,7 @@ int main(int argc, char* argv[]) {
 		}
 
 		// Iterate through window and send frame which have not been ACK
-		for(int i = window.front; i!=window.rear; i = (i+1) % window.maxsize){
+		for(int i = window.head; i!=window.back; i = (i+1) % window.maxsize){
 			if(!window.ack[i]){
 				double timeDif = (double)(clock() - window.startTime[i])/CLOCKS_PER_SEC * 1000;
 				if(window.startTime[i]== -1 || timeDif>TIMEOUT){
@@ -120,15 +117,14 @@ int main(int argc, char* argv[]) {
 					sendSegment(i, window.data[i], sock, recvAddr, slen);
 					printf("Sent msgno-%d: '%c'\n", i, window.data[i]);
 				}
-			}
-			else if(i == window.front && window.ack[i]){
-				//Slide
+			} else if(i == window.head && window.ack[i]){ // Slide Forward
 				delHead(&window);
 			}
 		}
 
-		if(endfile && window.front == window.rear)
-			break; // All file sent
+		if (endfile && window.head == window.back) {
+			break;
+		}
 	}
 
 	fclose(fp);
@@ -137,31 +133,27 @@ int main(int argc, char* argv[]) {
 }
 
 void* receiveResponse(void*){
-	// Haven't implemented checksum for receiving response
-
 	Ack response;
 	while(true){
 		if(recvfrom(sock, &response, sizeof(Ack), 0, 
 				(struct sockaddr*)&recvAddr, (socklen_t*) &slen) == -1)
-			{
-				cout<<"Error receiving byte"<<endl;
-				exit(EXIT_FAILURE);
-			}
+		{
+			error("Error revfrom");
+		}
 
-		if(response.ack == ACK){
+		if(response.ack == ACK) {
 			printf("ACK received for message no: %d\n", response.nextSeqnum);
 			window.ack[response.nextSeqnum] = true;
-		}
-		else{
+		} else {
 			printf("NAK received for message no: %d\n", response.nextSeqnum);
 			
 			// Resendings
-			int msgno = response.nextSeqnum;
-			int data = window.data[msgno];
+			int seqnum = response.nextSeqnum;
+			int data = window.data[seqnum];
 
-			window.startTime[msgno] = clock();
-			sendSegment(msgno, data, sock, recvAddr, slen);
-			printf("Sent msgno-%d: '%c'\n", msgno, data);
+			window.startTime[seqnum] = clock();
+			sendSegment(seqnum, data, sock, recvAddr, slen);
+			printf("Sent msgno-%d: '%c'\n", seqnum, data);
 		}
 	}
 }
@@ -171,17 +163,14 @@ void* receiveMessage(void*){
 	//Connection is terminated
 
 	Byte ch;
-	while(true){
-		if(recvfrom(sock, &ch, sizeof(Byte), 0, 
-			(struct sockaddr*)&recvAddr, (socklen_t*) &slen) == -1)
-		{
-			cout<<"Error receiving byte"<<endl;
-			exit(EXIT_FAILURE);
+	while(true) {
+		if (recvfrom(sock, &ch, sizeof(Byte), 0, (struct sockaddr*)&recvAddr, (socklen_t*) &slen) == -1) {
+			error("Error revfrom");
 		}
-		if(ch == XON)
-			cout<<"XON received"<<endl;
+		if (ch == XON)
+			cout << "XON received" << endl;
 		else if(ch == XOFF)
-			cout<<"XOFF received"<<endl;
+			cout << "XOFF received" << endl;
 
 		lastReceivedChar = ch;
 	}
