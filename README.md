@@ -86,6 +86,8 @@ Setiap TCP header memiliki 10 field data dengan total ukuran sebesar 20 bytes (1
   9. TCP checksum (2 bytes).
   10. Urgent pointer (2 bytes).
   11. TCP optional data (0-40 bytes).
+  
+![ilustrasi](img/ilustrasi2.jpg)
 
 Berikut ini merupakan kegunaan dari masing-masing field data yang ada.
   - Source dan destination TCP port merupakan endpoints dari komunikasi saat mengirimkan dan menerima data device.
