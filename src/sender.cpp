@@ -16,6 +16,8 @@ using namespace std;
 
 #define TIMEOUT 1000 // in ms
 
+//stringstream logsend;
+
 /* Arguments */
 char* filename;
 unsigned int windowsize;
@@ -88,7 +90,7 @@ int main(int argc, char* argv[]) {
 	fp = fopen(filename, "r");
 
 	if(fp == NULL){
-		error("File not found, stopping...");
+		error("File not found");
 	}
 
 	Byte ch;
@@ -115,7 +117,7 @@ int main(int argc, char* argv[]) {
 
 					window.startTime[i] = clock();
 					sendSegment(i, window.data[i], sock, recvAddr, slen);
-					printf("Sent msgno-%d: '%c'\n", i, window.data[i]);
+					printf("Sent seqnum-%d: '%c'\n", i, window.data[i]);
 				}
 			} else if(i == window.head && window.ack[i]){ // Slide Forward
 				delHead(&window);
@@ -153,14 +155,13 @@ void* receiveResponse(void*){
 
 			window.startTime[seqnum] = clock();
 			sendSegment(seqnum, data, sock, recvAddr, slen);
-			printf("Sent msgno-%d: '%c'\n", seqnum, data);
+			printf("Sent seqnum-%d: '%c'\n", seqnum, data);
 		}
 	}
 }
 
 void* receiveMessage(void*){
-	//Keep reading data from receiver until
-	//Connection is terminated
+	// Keep reading data from receiver until connection is terminated
 
 	Byte ch;
 	while(true) {

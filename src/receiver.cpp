@@ -17,13 +17,15 @@ using namespace std;
 
 #define LOCALHOST "127.0.0.9"
 
-/* Delay to adjust speed of consuming buffer, in seconds */
+//stringstream logrecv;
+
+/* adjust speed of consuming buffer, in seconds */
 #define DELAY 100
-/* Define receive buffer size */
+/* receive buffer size */
 #define RXQSIZE 8
-/* Define minimum upperlimit */
+/* min upperlimit */
 #define UPPERLIMIT 4
-/* Define maximum lowerlimit */
+/* max lowerlimit */
 #define LOWERLIMIT 2
 
 Byte rxbuf[RXQSIZE];
@@ -124,10 +126,10 @@ int main(int argc, char* argv[]) {
 		    	break;
 	    }
 	    else if(rcvq.count >= RXQSIZE){
-	    	cout<<"Fail: Buffer Full, not sending ACK"<<endl;
+	    	cout <<"Buffer Full"<< endl;
 	    }
 	    else{
-	    	cout<<"Fail: Wrong checksum. Sending NAK"<<endl;
+	    	cout <<"Wrong checksum. Sending NAK" <<endl;
 	    	sendACK(NAK, udpSocket, senderAddr, slen, message.seqnum, message.checksum);
 	    }
 
@@ -153,42 +155,20 @@ int main(int argc, char* argv[]) {
 
 static Byte q_get(QTYPE *queue) {
 	Byte *current;
-	/* Nothing in the queue */
+
 	if (!queue->count) return '\0';
-	
-	/*
-	Retrieve data from buffer, save it to "current" and "data"
-	If the number of characters in the receive buffer is below certain
-	level, then send XON.
-	Increment head index and check for wraparound.
-	*/
 	Byte c = queue->data[queue->head++];
 	queue->head %= queue->maxsize;
 	queue->count--;
 
 	if(c != Endfile){
 		printf("Consumed byte %d: '%c'\n",++byteConsumed, c);
-
-	// XON and XOFF not yet implemented
-
-	// if(queue->count == LOWERLIMIT && send_xoff){
-	 //    	cout<<"Buffer < maximum lowerlimit. Sending XON"<<endl;
-	 //    	Byte xon;
-	 //    	xon = (Byte) XON;
-	 //    	if(sendto(sockfd, &xon, sizeof(Byte), 0, 
-	 //    		(struct sockaddr *) &sender_addr, slen) == -1)
-	 //    	{
-	 //    		cout<<"Sending XON failed"<<endl;
-	 //    	}
-	 //    	send_xoff = false;
-		// }
 	}
 
 	return c;
 }
 
 void* consumeBuffer(void*){
-	//Consume Buffer with delay
 	while(true){
 		q_get(rxq);
 		usleep((rand()%5+1) * DELAY * 1000); //usleep parameter is useconds

@@ -4,6 +4,8 @@
 
 using namespace std;
 
+stringstream logsend;
+
 void sendSegment(Byte segnum, Byte data, int sock, struct sockaddr_in receiverAddr, int slen) {
     Segment message;
     message.soh = SOH;

@@ -20,6 +20,8 @@
 
 using namespace std;
 
+extern stringstream logsend;
+
 #define DEFAULT_BUFFSIZE 256
 
 typedef struct SendWindow {

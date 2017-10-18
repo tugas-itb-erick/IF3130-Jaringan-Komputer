@@ -3,6 +3,8 @@
 #include "recvWindow.h"
 using namespace std;
 
+stringstream logrecv;
+
 void sendACK(Byte ack, int sock, struct sockaddr_in senderAddr, int slen, unsigned int seqnum, int checksum) {
 	Ack response;
     response.ack = ack;
@@ -82,18 +84,4 @@ void insertIntoProcessBuf(Byte data, QTYPE *queue, int sock, struct sockaddr_in 
     queue->data[queue->back++] = data;
     queue->back %= queue->maxsize;
     queue->count++;
-
-    // Sending XON and XOFF not implemented yet
-
-    // if(queue->count > UPPERLIMIT && !send_xoff){
-    //  cout<<"Buffer > minimum upperlimit. Sending XOFF"<<endl;
-    //  Byte xoff;
-    //  xoff = (Byte) XOFF;
-    //  if(sendto(sock, &xoff, sizeof(Byte), 0, 
-    //      (struct sockaddr *) &senderAddr, slen) == -1)
-    //  {
-    //      cout<<"Sending XOFF failed"<<endl;
-    //  }
-    //  send_xoff = true;
-    // }
 }
