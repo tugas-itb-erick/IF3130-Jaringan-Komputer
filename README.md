@@ -15,9 +15,30 @@
 
 Cara kerja sliding window dalam program anda.
 
+
 ## Fungsi - fungsi Terkait Sliding Window
 
-Jelaskan juga fungsi yang terkait dengan sliding window pada program anda dan apa yang dilakukan oleh fungsi tersebut.
+Berikut adalah fungsi-fungsi yang terkait dengan sliding window:
+
+1.  ```void sendSegment(Byte seqnum, Byte data, int sock, struct sockaddr_in receiverAddr, int slen)``` untuk mengirim pesan dari sender ke receiver
+
+2.  ```void sendACK(Byte ack, int sock, struct sockaddr_in senderAddr, int slen, unsigned int seqnum, int checksum)``` untuk mengirim acknowledgement dari receiver ke sender
+
+3.  ```void increaseWindow(RecvWindow* window)``` dan ```void decreaseWindow(RecvWindow* window)``` untuk mengubah ukuran sliding window receiver.
+
+4.  ```string createCRC(string bitStr)``` untuk menghitung checksum bertipe crc
+
+5.  ```bool isFrameValid(Segment msg)``` untuk memeriksa apakah susunan segment memiliki bentuk yang valid
+
+6.  ```void delHead(SendWindow* window)``` untuk menghapus bagian head dari window sehingga window mengecil
+
+7.  ```void putBack(Byte data, SendWindow* window)``` untuk meletakkan sebuah data pada bagian belakang window
+
+8.  ```Byte getChecksum(Segment msg)``` untuk mengenerate checksum dari sebuah segment
+
+9.  ```void* receiveResponse(void*)``` fungsi sender untuk menerima respons (ACK) dari receiver
+
+10. ```void* consumeBuffer(void*)``` fungsi receiver untuk menunggu pada waktu random untuk mensimulasi sliding window
 
 
 # Pembagian Tugas
@@ -27,15 +48,15 @@ Sampaikan dalam list pengerjaan untuk setiap mahasiswa. Sebagai contoh: XXXX men
 
 # Jawaban dari Pertanyaan
 
-1. Apa yang terjadi jika advertised window yang dikirim bernilai 0? Apa cara untuk menangani hal tersebut?
+### Apa yang terjadi jika advertised window yang dikirim bernilai 0? Apa cara untuk menangani hal tersebut?
 
 TCP Zero Window adalah keadaan dimana ukuran dari window pada suatu mesin tetap bernilai 0 dalam jangka waktu tertentu. Hal ini menandakan bahwa sementara client tidak dapat menerima data dan transmisi TCP akan terhenti hingga client dapat memroses data pada receive buffer. Ukuran window TCP merupakan banyaknya data (informasi) yang dapat diterima mesin pada saat sesi TCP dan masih mampu untuk memroses data. Pada saat mesin melakukan inisiasi koneksi TCP pada server, mesin akan memberi tahu server berapa banyak data yang dapat diterima dengan ukuran window.
 
 Ketika sesi TCP sudah terinisiasi dan server mulai mengirimkan data, ukuran window pada client akan berkurang seiring dengan terisinya buffer yang ada. Pada saat yang bersamaan, client akan memroses data pada buffer dan mengosongkannya untuk membuat ruang kosong untuk lebih banyak data. Ketika ukuran window TCP (TCP Window Size) menjadi 0, client menjadi tidak dapat menerima data lagi hingga terjadi pemrosesan buffer kembali. Pada kasus ini biasanya akan diberikan peringatan oleh protocl expert megenai zero window pada expert view.
 
-Hal ini dapat diatasi dengan cara mencari tahu apa yang sedang dilakukan client sebelum terjadi TCP Zero Window yang bisa saja terjadi diakibatkan oleh terlalu banyaknya proses yang dijalankan pada saat itu.
+Hal ini dapat diatasi dengan cara mencari tahu apa yang sedang dilakukan client sebelum terjadi TCP Zero Window yang bisa saja terjadi diakibatkan oleh terlalu banyaknya proses yang dijalankan pada saat itu. Satu-satunya cara agar receiver dapat menerima data kembali adalah dengan menunggu hingga advertised window tidak bernilai 0.
 
-2. Sebutkan field data yang terdapat TCP Header serta ukurannya, ilustrasikan, dan jelaskan kegunaan dari masing-masing field data tersebut!
+### Sebutkan field data yang terdapat TCP Header serta ukurannya, ilustrasikan, dan jelaskan kegunaan dari masing-masing field data tersebut!
 
 Setiap TCP header memiliki 10 field data dengan total ukuran sebesar 20 bytes (160 bits). TCP header juga dapat menambahkan alokasi data tambahan yang berukuran hingga 40 bytes. Field-field data yang terdapat pada TCP header adalah sebagai berikut.
   1. Source TCP port number (2 bytes).
@@ -60,4 +81,3 @@ Berikut ini merupakan kegunaan dari masing-masing field data yang ada.
   - Window size digunakan pengirim untuk meregulasikan seberapa banyak data yang akan dikirimkan dan akan menerima acknowledgement number sebagai balasannya. Ketika window size terlalu besar atau terlalu kecil, akan memperlambat performansi dari pengiriman dan penerimaan data.
   - Checksum value akan dihasilkan dari protocol pengirim sebagai suatu teknik matematika yang akan membantu penerima untuk mendeteksi jika terjadi masalah pada pesan yang akan diterima seperti corrupted atau tampered with.
   - Urgent pointer pada umumnya diberi nilai 0 dan diabaikan, namun pada konjungsi dengan salah satu dari control flags, urgent pointer dapat digunakan sebagai data offset untuk menandai suatu subset dari pesan sebagai requiring priority processing.
-  - 
