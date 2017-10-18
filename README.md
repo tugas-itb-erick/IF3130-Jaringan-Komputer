@@ -1,6 +1,14 @@
 # Petunjuk Penggunaan Program
 
-Petunjuk
+1. Download dan ekstract file zip
+
+2. Buka cmd, ketik command ```make```
+
+3. Buka dua window cmd yang berbeda (boleh dari 2 komputer yang berbeda namun terkoneksi pada jaringan yang sama)
+
+4. Pada cmd pertama, ketik command ```./recvfile <filename> <windowsize> <buffersize> <port>```
+
+5. Pada cmd kedua, ketik command ```./sendfile <filename> <windowsize> <buffersize> <hostname> <destination_port>```
 
 
 # Cara Kerja Sliding Window
