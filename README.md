@@ -1,2 +1,55 @@
-# sliding_window_protocol
-A simulation of Sliding Window Protocol written in C++ with Socket Programming
+# Petunjuk Penggunaan Program
+
+Petunjuk
+
+
+# Cara Kerja Sliding Window
+
+Cara kerja sliding window dalam program anda.
+
+## Fungsi - fungsi Terkait Sliding Window
+
+Jelaskan juga fungsi yang terkait dengan sliding window pada program anda dan apa yang dilakukan oleh fungsi tersebut.
+
+
+# Pembagian Tugas
+
+Sampaikan dalam list pengerjaan untuk setiap mahasiswa. Sebagai contoh: XXXX mengerjakan fungsi YYYY, ZZZZ, dan YYZZ.
+
+
+# Jawaban dari Pertanyaan
+
+1. Apa yang terjadi jika advertised window yang dikirim bernilai 0? Apa cara untuk menangani hal tersebut?
+
+TCP Zero Window adalah keadaan dimana ukuran dari window pada suatu mesin tetap bernilai 0 dalam jangka waktu tertentu. Hal ini menandakan bahwa sementara client tidak dapat menerima data dan transmisi TCP akan terhenti hingga client dapat memroses data pada receive buffer. Ukuran window TCP merupakan banyaknya data (informasi) yang dapat diterima mesin pada saat sesi TCP dan masih mampu untuk memroses data. Pada saat mesin melakukan inisiasi koneksi TCP pada server, mesin akan memberi tahu server berapa banyak data yang dapat diterima dengan ukuran window.
+
+Ketika sesi TCP sudah terinisiasi dan server mulai mengirimkan data, ukuran window pada client akan berkurang seiring dengan terisinya buffer yang ada. Pada saat yang bersamaan, client akan memroses data pada buffer dan mengosongkannya untuk membuat ruang kosong untuk lebih banyak data. Ketika ukuran window TCP (TCP Window Size) menjadi 0, client menjadi tidak dapat menerima data lagi hingga terjadi pemrosesan buffer kembali. Pada kasus ini biasanya akan diberikan peringatan oleh protocl expert megenai zero window pada expert view.
+
+Hal ini dapat diatasi dengan cara mencari tahu apa yang sedang dilakukan client sebelum terjadi TCP Zero Window yang bisa saja terjadi diakibatkan oleh terlalu banyaknya proses yang dijalankan pada saat itu.
+
+2. Sebutkan field data yang terdapat TCP Header serta ukurannya, ilustrasikan, dan jelaskan kegunaan dari masing-masing field data tersebut!
+
+Setiap TCP header memiliki 10 field data dengan total ukuran sebesar 20 bytes (160 bits). TCP header juga dapat menambahkan alokasi data tambahan yang berukuran hingga 40 bytes. Field-field data yang terdapat pada TCP header adalah sebagai berikut.
+  1. Source TCP port number (2 bytes).
+  2. Destination TCP port number (2 bytes).
+  3. Sequence number (4 bytes).
+  4. Acknowledgement number (4 bytes).
+  5. TCP data offset (4 bits).
+  6. Reserved data (3 bits).
+  7. Control flags (hingga 9 bits).
+  8. Window size (2 bytes).
+  9. TCP checksum (2 bytes).
+  10. Urgent pointer (2 bytes).
+  11. TCP optional data (0-40 bytes).
+
+Berikut ini merupakan kegunaan dari masing-masing field data yang ada.
+  - Source dan destination TCP port merupakan endpoints dari komunikasi saat mengirimkan dan menerima data device.
+  - Sequence number digunakan oleh pengirim pesan untuk menandai urutan dari kelompok pesan-pesan yang ada.
+  - Acknowledgement number digunakan oleh pengirim dan penerima pesan untuk mengkomunikasikan sequence number dari pesan yang akan dikirim atau yang baru saja diterima.
+  - Data offset menyimpan ukuran total dari TCP header dalam kelipatan empat bytes. Jika header tidak menggunakan TCP optional data maka data offset akan menjadi 5 yang merepresentasikan 20 bytes. Namun, jika header menggunakan TCP optional data secara maksimal maka data offset menjadi 15 yang merepresentasikan 60 bytes.
+  - Reserved data selalu memiliki nilai 0 dan digunakan untuk mensejajarkan ukuran total header menjadi kelipatan empat bytes yang penting untuk efisiensi dari data processing pada setiap komputer.
+  - TCP menggunakan satu set yang berisi 6 standard control flags dan 3 extended control flags (dimana setiap bit merepresentasikan on atau off) untuk mengatur data flow pada situasi tertentu.
+  - Window size digunakan pengirim untuk meregulasikan seberapa banyak data yang akan dikirimkan dan akan menerima acknowledgement number sebagai balasannya. Ketika window size terlalu besar atau terlalu kecil, akan memperlambat performansi dari pengiriman dan penerimaan data.
+  - Checksum value akan dihasilkan dari protocol pengirim sebagai suatu teknik matematika yang akan membantu penerima untuk mendeteksi jika terjadi masalah pada pesan yang akan diterima seperti corrupted atau tampered with.
+  - Urgent pointer pada umumnya diberi nilai 0 dan diabaikan, namun pada konjungsi dengan salah satu dari control flags, urgent pointer dapat digunakan sebagai data offset untuk menandai suatu subset dari pesan sebagai requiring priority processing.
+  - 
