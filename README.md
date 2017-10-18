@@ -13,7 +13,19 @@
 
 # Cara Kerja Sliding Window
 
-Cara kerja sliding window dalam program anda.
+Pertama program sender dan receiver akan membuat socket UDP untuk melakukan komunikasi. Setelah itu, program sender akan menerima input file dan menyimpannya ke dalam buffer. Setiap data pada buffer akan dikirim ke receiver dalam tipe bentukan Segment, yang memiliki format sebagai berikut:
+
+| SOH    | SeqNum | STX    | Data   | ETX    | Checksum |
+| ------ | ------ | ------ | ------ | ------ | ---------|
+| 1 byte | 4 byte | 1 byte | 1 byte | 1 byte | 1 byte   |
+
+Ketika receiver menerima paket segment, receiver akan memeriksa apakah paket yang dikirim sudah benar dengan menggunakan nilai checksum. Data tersebut kemudian disimpan pada buffer dan ditulis ke file output, lalu juga akan dikirimkan acknowledgement dari receiver ke sender dengan format berikut: 
+
+| ACK    | NextSeqNum | Advertised WinSize | Checksum |
+| ------ | ---------- | ------------------ | -------- |
+| 1 byte | 4 byte     | 1 byte             | 1 byte   |
+
+Apabila sender tidak menerima ACK dalam waktu yang sudah ditentukan (pada kasus program ini ditentukan waktu timeout 1000ms), maka sender akan mengirim ulang segment ke receiver. Ketika sebuah frame pada window sender sudah mengirim Segment dan menerima ACK, window akan digeser (slide). Hal tersebut (dari membaca file, mengirim Segment, hingga mengirim ACK kembali) dilakukan terus menerus untuk setiap frame pada window hingga ditemukan EOF pada buffer sender. Ketika ditemukan EOF, sender mengirimkan data Endfile sehingga receiver mengenali dan tahu bahwa pengiriman file telah berakhir. 
 
 
 ## Fungsi - fungsi Terkait Sliding Window
@@ -26,7 +38,7 @@ Berikut adalah fungsi-fungsi yang terkait dengan sliding window:
 
 3.  ```void increaseWindow(RecvWindow* window)``` dan ```void decreaseWindow(RecvWindow* window)``` untuk mengubah ukuran sliding window receiver.
 
-4.  ```string createCRC(string bitStr)``` untuk menghitung checksum bertipe crc
+4.  ```string createCRC(string bitStr)``` untuk menghitung checksum dengan metode crc
 
 5.  ```bool isFrameValid(Segment msg)``` untuk memeriksa apakah susunan segment memiliki bentuk yang valid
 
@@ -43,7 +55,11 @@ Berikut adalah fungsi-fungsi yang terkait dengan sliding window:
 
 # Pembagian Tugas
 
-Sampaikan dalam list pengerjaan untuk setiap mahasiswa. Sebagai contoh: XXXX mengerjakan fungsi YYYY, ZZZZ, dan YYZZ.
+| Nama               | NIM      | Fungsi                                                                   |
+| ------------------ | -------- | ------------------------------------------------------------------------ |
+| Erick Wijaya       | 13515057 | sendSegment, putBack, delHead, setup, receiveResponse                    |
+| Kezia Suhendra     | 13515063 | sendACK, increaseWindow, decreaseWindow, error, getBitString             |
+| Catherine Almira   | 13515111 | createCRC, getChecksum, isFrameValid, consumeBuffer, insertIntoProcessBuf|
 
 
 # Jawaban dari Pertanyaan
