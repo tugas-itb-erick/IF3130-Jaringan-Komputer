@@ -17,7 +17,7 @@
 #define ENQ 5
 #define ACK 6
 #define NAK 21
-#define Endfile 26
+#define Endfile -1
 
 /* XON/XOFF protocol */
 #define XON (0x11)
@@ -25,7 +25,7 @@
 
 void error(std::string msg);
 
-typedef unsigned char Byte;
+typedef char Byte;
 
 typedef struct QTYPE
 {

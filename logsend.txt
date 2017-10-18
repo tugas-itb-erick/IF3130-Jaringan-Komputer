@@ -1,75 +1,204 @@
-[ Thu Oct 19 03:29:54 2017 ] UDP Socket created successfully
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-0: k
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-1: e
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-2: c
-[ Thu Oct 19 03:29:54 2017 ] ACK received for message num: 0
-[ Thu Oct 19 03:29:54 2017 ] Slide window
-[ Thu Oct 19 03:29:54 2017 ] ACK received for message num: 1
-[ Thu Oct 19 03:29:54 2017 ] ACK received for message num: 2
-[ Thu Oct 19 03:29:54 2017 ] ACK received for message num: 3
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-3: h
-[ Thu Oct 19 03:29:54 2017 ] Slide window
-[ Thu Oct 19 03:29:54 2017 ] Slide window
-[ Thu Oct 19 03:29:54 2017 ] Slide window
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-4: u
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-0:  
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-1: c
-[ Thu Oct 19 03:29:54 2017 ] ACK received for message num: 4
-[ Thu Oct 19 03:29:54 2017 ] Slide window
-[ Thu Oct 19 03:29:54 2017 ] ACK received for message num: 0
-[ Thu Oct 19 03:29:54 2017 ] ACK received for message num: 1
-[ Thu Oct 19 03:29:54 2017 ] ACK received for message num: 2
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-2: h
-[ Thu Oct 19 03:29:54 2017 ] Slide window
-[ Thu Oct 19 03:29:54 2017 ] Slide window
-[ Thu Oct 19 03:29:54 2017 ] Slide window
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-3: u
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-4: ~
-[ Thu Oct 19 03:29:54 2017 ] Sent Segment with seqnum-0:  
-[ Thu Oct 19 03:29:55 2017 ] Time out frame number 3
-[ Thu Oct 19 03:29:55 2017 ] Sent Segment with seqnum-3: u
-[ Thu Oct 19 03:29:55 2017 ] Time out frame number 4
-[ Thu Oct 19 03:29:55 2017 ] Sent Segment with seqnum-4: ~
-[ Thu Oct 19 03:29:55 2017 ] Time out frame number 0
-[ Thu Oct 19 03:29:55 2017 ] ACK received for message num: 3
-[ Thu Oct 19 03:29:55 2017 ] Sent Segment with seqnum-0:  
-[ Thu Oct 19 03:29:55 2017 ] ACK received for message num: 4
-[ Thu Oct 19 03:29:55 2017 ] Slide window
-[ Thu Oct 19 03:29:55 2017 ] Slide window
-[ Thu Oct 19 03:29:55 2017 ] ACK received for message num: 0
-[ Thu Oct 19 03:29:55 2017 ] Sent Segment with seqnum-1: c
-[ Thu Oct 19 03:29:55 2017 ] Sent Segment with seqnum-2:  
-[ Thu Oct 19 03:29:55 2017 ] Slide window
-[ Thu Oct 19 03:29:55 2017 ] Sent Segment with seqnum-3: h
-[ Thu Oct 19 03:29:56 2017 ] Time out frame number 1
-[ Thu Oct 19 03:29:56 2017 ] Sent Segment with seqnum-1: c
-[ Thu Oct 19 03:29:56 2017 ] Time out frame number 2
-[ Thu Oct 19 03:29:56 2017 ] Sent Segment with seqnum-2:  
-[ Thu Oct 19 03:29:56 2017 ] Time out frame number 3
-[ Thu Oct 19 03:29:56 2017 ] Sent Segment with seqnum-3: h
-[ Thu Oct 19 03:29:56 2017 ] ACK received for message num: 1
-[ Thu Oct 19 03:29:56 2017 ] Slide window
-[ Thu Oct 19 03:29:56 2017 ] ACK received for message num: 2
-[ Thu Oct 19 03:29:56 2017 ] ACK received for message num: 3
-[ Thu Oct 19 03:29:56 2017 ] Sent Segment with seqnum-4:  
-[ Thu Oct 19 03:29:56 2017 ] Slide window
-[ Thu Oct 19 03:29:56 2017 ] Slide window
-[ Thu Oct 19 03:29:56 2017 ] Sent Segment with seqnum-0: u
-[ Thu Oct 19 03:29:56 2017 ] ACK received for message num: 4
-[ Thu Oct 19 03:29:56 2017 ] Sent Segment with seqnum-1:  
-[ Thu Oct 19 03:29:56 2017 ] Slide window
-[ Thu Oct 19 03:29:56 2017 ] Sent Segment with seqnum-2: c
-[ Thu Oct 19 03:29:57 2017 ] Time out frame number 0
-[ Thu Oct 19 03:29:57 2017 ] Sent Segment with seqnum-0: u
-[ Thu Oct 19 03:29:57 2017 ] Time out frame number 1
-[ Thu Oct 19 03:29:57 2017 ] Sent Segment with seqnum-1:  
-[ Thu Oct 19 03:29:57 2017 ] Time out frame number 2
-[ Thu Oct 19 03:29:57 2017 ] Sent Segment with seqnum-2: c
-[ Thu Oct 19 03:29:57 2017 ] ACK received for message num: 0
-[ Thu Oct 19 03:29:57 2017 ] Slide window
-[ Thu Oct 19 03:29:57 2017 ] ACK received for message num: 1
-[ Thu Oct 19 03:29:57 2017 ] Sent Segment with seqnum-3:  
-[ Thu Oct 19 03:29:57 2017 ] Slide window
-[ Thu Oct 19 03:29:57 2017 ] ACK received for message num: 2
-[ Thu Oct 19 03:29:57 2017 ] Sent Segment with seqnum-4:  
-[ Thu Oct 19 03:29:57 2017 ] ACK received for message num: 3
+[ Thu Oct 19 04:08:54 2017 ] UDP Socket created successfully
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-0: L
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-1: o
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-2: r
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-3: e
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-4: m
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-5:  
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-6: i
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-7: p
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-8: s
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-9: u
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-10: m
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 0
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 1
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 2
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 3
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-11:  
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 4
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 5
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 6
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 7
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 8
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 9
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 10
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 11
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 12
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-12: d
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-13: o
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-14: l
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-15: o
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-16: r
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-17:  
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-18: s
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-19: i
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-0: t
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-1:  
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-2: a
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-3: m
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 13
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 14
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 15
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 16
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-4: e
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 17
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 18
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-5: t
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 19
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 0
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-6: ,
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 1
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-7:  
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 2
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-8: c
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 3
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 4
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 5
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 6
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 7
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 8
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-9: o
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-10: n
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 9
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-11: s
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 10
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-12: e
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-13Thu Oct 19 04:08:54 2017 : c
+
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 12
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-14: t
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 13
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-15: e
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 14
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-16: t
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 15
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-17: u
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 16
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 17
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-18: r
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 18
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-19:  
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 19
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-0: a
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 0
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-1: d
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 1
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-2: i
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 2
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-3: p
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 3
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-4: i
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-5: s
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 4
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-6: c
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 5
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 6
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-7: i
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-8: n
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 7
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-9: g
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-10:  
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-11: e
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-12: l
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-13: i
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-14: t
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-15: 
+
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-16:  
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-17:  
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-18: C
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 8
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-19: r
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 9
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 10
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 11
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 12
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 13
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 14
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 15
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 16
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 17
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-0: a
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 18
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 19
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 0
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-1: s
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-2:  
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 1
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-3: v
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 2
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-4: e
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 3
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-5: l
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-6:  
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-7: l
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-8: e
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-9: o
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-10:  
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 4
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 5
+[ Thu Oct 19 04:08:54 2017 ] Sent Segment with seqnum-11: i
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: 6
+[ Thu Oct 19 04:08:54 2017 ] Slide window
+[ Thu Oct 19 04:08:54 2017 ] ACK received for message num: [ 7hu Oct 19 04:08:54 2017 
