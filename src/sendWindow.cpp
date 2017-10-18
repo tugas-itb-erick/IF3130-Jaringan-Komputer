@@ -4,8 +4,6 @@
 
 using namespace std;
 
-stringstream logsend;
-
 void sendSegment(Byte segnum, Byte data, int sock, struct sockaddr_in receiverAddr, int slen) {
     Segment message;
     message.soh = SOH;
@@ -63,7 +61,6 @@ string createCRC(string bitStr) {
     return result;
 }
 
-//Generate BitString from message (not included checksum)
 string getBitString(Segment msg) {
     string bitStr = "";
     bitStr += bitset<8>(msg.soh).to_string();

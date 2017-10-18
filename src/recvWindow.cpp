@@ -3,8 +3,6 @@
 #include "recvWindow.h"
 using namespace std;
 
-stringstream logrecv;
-
 void sendACK(Byte ack, int sock, struct sockaddr_in senderAddr, int slen, unsigned int seqnum, int checksum) {
 	Ack response;
     response.ack = ack;

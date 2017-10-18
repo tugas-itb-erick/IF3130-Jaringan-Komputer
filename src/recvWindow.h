@@ -20,8 +20,6 @@
 
 using namespace std;
 
-extern stringstream logrecv;
-
 typedef struct RecvWindow {
 	unsigned int head;
 	unsigned int back;

@@ -16,7 +16,9 @@ using namespace std;
 
 #define TIMEOUT 1000 // in ms
 
-//stringstream logsend;
+/* Logging */
+time_t now;
+stringstream logsend;
 
 /* Arguments */
 char* filename;
@@ -61,8 +63,11 @@ void setup(int argc, char* argv[]) {
     // Creating UDP socket
     if ((sock = socket(PF_INET, SOCK_DGRAM, 0)) < 0) {
         error("Socket failed");
-    }
-  
+	}
+
+	now = time(nullptr);
+	logsend << "[ " << asctime(localtime(&now)) << "] UDP Socket created successfully.";
+
     // Configure settings in address struct
     recvAddr.sin_family = AF_INET;
     recvAddr.sin_port = htons(destination_port);
@@ -111,16 +116,24 @@ int main(int argc, char* argv[]) {
 		for(int i = window.head; i!=window.back; i = (i+1) % window.maxsize){
 			if(!window.ack[i]){
 				double timeDif = (double)(clock() - window.startTime[i])/CLOCKS_PER_SEC * 1000;
-				if(window.startTime[i]== -1 || timeDif>TIMEOUT){
-					if(window.startTime[i] != -1)
-						printf("Time out frame no %d\n",i);
+				if(window.startTime[i]== -1 || timeDif > TIMEOUT){
+					if(window.startTime[i] != -1) {
+						printf("Time out frame number %d\n",i);
+						now = time(nullptr);
+						logsend << "[ " << asctime(localtime(&now)) << "] Time out frame number " << i << ".";
+					}
 
 					window.startTime[i] = clock();
 					sendSegment(i, window.data[i], sock, recvAddr, slen);
 					printf("Sent seqnum-%d: '%c'\n", i, window.data[i]);
+					now = time(nullptr);
+					logsend << "[ " << asctime(localtime(&now)) << "] Sent Segment with seqnum-" << i << ": " << window.data[i] << ".";
 				}
 			} else if(i == window.head && window.ack[i]){ // Slide Forward
 				delHead(&window);
+				now = time(nullptr);
+				logsend << "[ " << asctime(localtime(&now)) << "] Slide window.";
+
 			}
 		}
 
@@ -129,6 +142,12 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
+	fclose(fp);
+	fp = fopen("logsend.txt", "w");
+	string sendlog = logsend.str();
+	replace(sendlog.begin(), sendlog.end(), '\n', ' ');
+	replace(sendlog.begin(), sendlog.end(), '.', '\n');
+	fprintf(fp, "%s", sendlog.c_str());
 	fclose(fp);
     
     return 0;
@@ -144,11 +163,16 @@ void* receiveResponse(void*){
 		}
 
 		if(response.ack == ACK) {
-			printf("ACK received for message no: %d\n", response.nextSeqnum);
+			printf("ACK received for message num: %d\n", response.nextSeqnum);
+			now = time(nullptr);
+			logsend << "[ " << asctime(localtime(&now)) << "] ACK received for message num: " << response.nextSeqnum << ".";
+
 			window.ack[response.nextSeqnum] = true;
 		} else {
-			printf("NAK received for message no: %d\n", response.nextSeqnum);
-			
+			printf("NAK received for message num: %d\n", response.nextSeqnum);
+			now = time(nullptr);
+			logsend << "[ " << asctime(localtime(&now)) << "] NAK received for message num: " << response.nextSeqnum << ".";
+
 			// Resendings
 			int seqnum = response.nextSeqnum;
 			int data = window.data[seqnum];
@@ -156,6 +180,9 @@ void* receiveResponse(void*){
 			window.startTime[seqnum] = clock();
 			sendSegment(seqnum, data, sock, recvAddr, slen);
 			printf("Sent seqnum-%d: '%c'\n", seqnum, data);
+			now = time(nullptr);
+			logsend << "[ " << asctime(localtime(&now)) << "] Sent Segment with seqnum-" << seqnum << ": " << data << ".";
+
 		}
 	}
 }

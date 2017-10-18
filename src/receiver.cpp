@@ -17,8 +17,6 @@ using namespace std;
 
 #define LOCALHOST "127.0.0.9"
 
-//stringstream logrecv;
-
 /* adjust speed of consuming buffer, in seconds */
 #define DELAY 100
 /* receive buffer size */
@@ -32,6 +30,10 @@ Byte rxbuf[RXQSIZE];
 QTYPE rcvq = { 0, 0, 0, RXQSIZE, rxbuf };
 QTYPE *rxq = &rcvq;
 bool send_xoff = false;
+
+/* Logging */
+time_t now;
+stringstream logrecv;
 
 /* Arguments */
 char* filename;
@@ -60,7 +62,7 @@ void setup(int argc, char* argv[]) {
         printf("Usage: ./recvfile <filename> <windowsize> <buffersize> <port>\n");
         exit(EXIT_FAILURE);
     }
-    
+
     filename = argv[1];
     windowsize = atoi(argv[2]);
     buffsize = DEFAULT_BUFFSIZE;
@@ -70,12 +72,15 @@ void setup(int argc, char* argv[]) {
     bool* received;
     buff = (Byte *) malloc(sizeof(*buff) * buffsize);
     received = (bool *) malloc(sizeof(*received) * buffsize);
-    window = {0, buffsize/2 - 1, windowsize, buff, received};
+    window = {0, buffsize/2 - 1/*0*/, windowsize, buff, received};
 
     // Creating UDP socket
     if ((udpSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
         error("Socket failed");
-    }
+	}
+	now = time(nullptr);
+	logrecv << "[ " << asctime(localtime(&now)) << "] UDP Socket created successfully.";
+	
       
     // Configure settings in address struct
     recvAddr.sin_family = AF_INET;
@@ -86,7 +91,9 @@ void setup(int argc, char* argv[]) {
     // Bind socket with address struct
     if (bind(udpSocket, (struct sockaddr *) &recvAddr, sizeof(recvAddr)) < 0) {
         error("Bind failed");
-    }
+	}
+	now = time(nullptr);
+	logrecv << "[ " << asctime(localtime(&now)) << "] Bind socket succeeded.";
 }
 
 int main(int argc, char* argv[]) {
@@ -116,28 +123,37 @@ int main(int argc, char* argv[]) {
 	    	Byte data = message.data;
 	    	window.data[msgno] = data;
 
-	    	sendACK(ACK, udpSocket, senderAddr, slen, msgno, message.checksum);
+			sendACK(ACK, udpSocket, senderAddr, slen, msgno, message.checksum);
+			cout << "Sending ACK with seqnum-" << msgno << " (data: " << data << ")." << endl;
+			now = time(nullptr);
+			logrecv << "[ " << asctime(localtime(&now)) << "] Sent ACK with seqnum-" << msgno << " (data: " << data << ").";
+
 	    	if(data != Endfile){
-                fprintf(fp, "%c", data);
-		    	printf("Frame no: %d received (Byte received: %c)\n", msgno, data);
+				fprintf(fp, "%c", data);
+				now = time(nullptr);
+				logrecv << "[ " << asctime(localtime(&now)) << "] Writen data=" << data << " to output file.";
 		    	window.received[msgno] = true;
 	    	}
 		    else
 		    	break;
 	    }
 	    else if(rcvq.count >= RXQSIZE){
-	    	cout <<"Buffer Full"<< endl;
+	    //	cout <<"Buffer Full"<< endl;
 	    }
 	    else{
-	    	cout <<"Wrong checksum. Sending NAK" <<endl;
-	    	sendACK(NAK, udpSocket, senderAddr, slen, message.seqnum, message.checksum);
-	    }
+	    	cout <<"Wrong checksum. Sending NAK with seqnum-" << message.seqnum << endl;
+			sendACK(NAK, udpSocket, senderAddr, slen, message.seqnum, message.checksum);
+			now = time(nullptr);
+			logrecv << "[ " << asctime(localtime(&now)) << "] Sent NAK with seqnum-" << message.seqnum << ".";	    
+		}
 
 	    for(int i = window.head; i != window.back; i = (i+1)%window.maxsize){
 	    	if(i == window.head && window.received[i]){
 	    		insertIntoProcessBuf(window.data[i], rxq, udpSocket, senderAddr, slen);
 	    		decreaseWindow(&window);
-	    		increaseWindow(&window);
+				increaseWindow(&window);
+				now = time(nullptr);
+				logrecv << "[ " << asctime(localtime(&now)) << "] Slide window.";
 	    	}
 	    }
 	}
@@ -145,7 +161,13 @@ int main(int argc, char* argv[]) {
 		//Do Nothing, waiting buffer being consumed
     }
     
-    fclose(fp);
+	fclose(fp);
+	fp = fopen("logrecv.txt", "w");
+	string sendlog = logrecv.str();
+	replace(sendlog.begin(), sendlog.end(), '\n', ' ');
+	replace(sendlog.begin(), sendlog.end(), '.', '\n');
+	fprintf(fp, "%s", sendlog.c_str());
+	fclose(fp);
 
     return 0;
 }
@@ -163,6 +185,8 @@ static Byte q_get(QTYPE *queue) {
 
 	if(c != Endfile){
 		printf("Consumed byte %d: '%c'\n",++byteConsumed, c);
+		now = time(nullptr);
+		logrecv << "[ " << asctime(localtime(&now)) << "] Consumed byte " << byteConsumed << ": " << c << ".";
 	}
 
 	return c;

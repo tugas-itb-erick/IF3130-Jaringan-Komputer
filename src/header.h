@@ -8,6 +8,7 @@
 #include <sstream>
 #include <chrono>
 #include <ctime>
+#include <algorithm>
 
 /* ASCII Constants */
 #define SOH 1
