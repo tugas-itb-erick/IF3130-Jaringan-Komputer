@@ -33,14 +33,14 @@ public class DVP {
 					// Inisialisasi nexthop
 					nexthop[i][j] = j;
 				} else {
-					nexthop[i][j] = -1;
+					nexthop[i][j] = UNDEFINED;
 				}
 				//nexthop[i][j] = i; // TODO: nexthop masi blm diinisialisasi dgn benar
 			}
 		}
 	}
 
-	public void initialize(int row, int[] neighbours) {
+	public void initialize(int[] neighbours) {
 		// for(int i=0; i<neighbours.length; i++) {
 		// 	dist[row][neighbours[i]] = 1;
 		// 	dist[neighbours[i]][row] = 1;
@@ -61,9 +61,10 @@ public class DVP {
 			if (dist[src][i] != UNDEFINED && i != dest) {
 				if (dist[dest][i] == UNDEFINED) {
 					dist[dest][i] += 1;
+					dist[dest][i] += dist[src][i] + dist[dest][src];
+					nexthop[dest][i] = src;
 				}
-				dist[dest][i] += dist[src][i];
-				nexthop[dest][i] = src;
+				
 			}
 		}
 	}
@@ -79,6 +80,18 @@ public class DVP {
 			}
 		}
 
+		return str.toString();
+	}
+
+	public String printDistance() {
+		StringBuilder str = new StringBuilder();
+		for (int i = 1; i <= size; i++) {
+			for (int j = 1; j <= size; j++) {
+				str.append(dist[i][j]);
+				str.append(" ");
+			}
+			str.append("\n");
+		}
 		return str.toString();
 	}
 }
