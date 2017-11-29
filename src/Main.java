@@ -77,7 +77,9 @@ class DVP {
 				str.append(dist[i][j]);
 				str.append(" ");
 				str.append(nexthop[i][j]);
-				str.append("\n");
+				if (i < size || j < size) {
+					str.append("\n");
+				}
 			}
 		}
 
