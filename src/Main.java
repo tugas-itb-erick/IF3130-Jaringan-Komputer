@@ -64,8 +64,15 @@ class DVP {
 					dist[dest][i] += 1;
 					dist[dest][i] += dist[src][i] + dist[dest][src];
 					nexthop[dest][i] = src;
+				} else if (dist[dest][i] > dist[src][i] + dist[dest][src]) {
+					dist[dest][i] = dist[src][i] + dist[dest][src];
+				} else if (dist[dest][i] == dist[src][i] + dist[dest][src]) {
+					if (nexthop[src][i] > src) {
+						nexthop[dest][i] = src;
+					} else {
+						nexthop[dest][i] = nexthop[src][i];
+					}
 				}
-				
 			}
 		}
 	}
