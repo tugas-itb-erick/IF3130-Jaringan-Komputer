@@ -1,4 +1,7 @@
-# Petunjuk Penggunaan Program
+# Sliding Window Protocol
+Tugas Besar 1 IF3130 Jaringan Komputer
+
+## Petunjuk Penggunaan Program
 
 1. Download dan ekstract file zip
 
@@ -11,7 +14,7 @@
 5. Pada cmd kedua, ketik command ```./sendfile <filename> <windowsize> <buffersize> <hostname> <destination_port>```
 
 
-# Cara Kerja Sliding Window
+## Cara Kerja Sliding Window
 
 Pertama program sender dan receiver akan membuat socket UDP untuk melakukan komunikasi. Setelah itu, program sender akan menerima input file dan menyimpannya ke dalam buffer. Setiap data pada buffer akan dikirim ke receiver dalam tipe bentukan Segment, yang memiliki format sebagai berikut:
 
@@ -28,7 +31,7 @@ Ketika receiver menerima paket segment, receiver akan memeriksa apakah paket yan
 Apabila sender tidak menerima ACK dalam waktu yang sudah ditentukan (pada kasus program ini ditentukan waktu timeout 1000ms), maka sender akan mengirim ulang segment ke receiver. Ketika sebuah frame pada window sender sudah mengirim Segment dan menerima ACK, window akan digeser (slide). Hal tersebut (dari membaca file, mengirim Segment, hingga mengirim ACK kembali) dilakukan terus menerus untuk setiap frame pada window hingga ditemukan EOF pada buffer sender. Ketika ditemukan EOF, sender mengirimkan data Endfile sehingga receiver mengenali dan tahu bahwa pengiriman file telah berakhir. 
 
 
-## Fungsi - fungsi Terkait Sliding Window
+### Fungsi - fungsi Terkait Sliding Window
 
 Berikut adalah fungsi-fungsi yang terkait dengan sliding window:
 
@@ -53,18 +56,18 @@ Berikut adalah fungsi-fungsi yang terkait dengan sliding window:
 10. ```void* consumeBuffer(void*)``` fungsi receiver untuk menunggu pada waktu random untuk mensimulasi sliding window
 
 
-# Pembagian Tugas
+## Pembagian Tugas
 
 | Nama               | NIM      | Fungsi                                                                   |
 | ------------------ | -------- | ------------------------------------------------------------------------ |
-| Erick Wijaya       | 13515057 | sendSegment, putBack, delHead, setup, receiveResponse                    |
-| Kezia Suhendra     | 13515063 | sendACK, increaseWindow, decreaseWindow, error, getBitString             |
-| Catherine Almira   | 13515111 | createCRC, getChecksum, isFrameValid, consumeBuffer, insertIntoProcessBuf|
+| [Erick Wijaya](https://github.com/wijayaerick)       | 13515057 | sendSegment, putBack, delHead, setup, receiveResponse                    |
+| [Kezia Suhendra](https://github.com/keziasuhendra)     | 13515063 | sendACK, increaseWindow, decreaseWindow, error, getBitString             |
+| [Catherine Almira](https://github.com/calmira)   | 13515111 | createCRC, getChecksum, isFrameValid, consumeBuffer, insertIntoProcessBuf|
 
 
-# Jawaban dari Pertanyaan
+## Jawaban dari Pertanyaan
 
-### Apa yang terjadi jika advertised window yang dikirim bernilai 0? Apa cara untuk menangani hal tersebut?
+**Apa yang terjadi jika advertised window yang dikirim bernilai 0? Apa cara untuk menangani hal tersebut?**
 
 TCP Zero Window adalah keadaan dimana ukuran dari window pada suatu mesin tetap bernilai 0 dalam jangka waktu tertentu. Hal ini menandakan bahwa sementara client tidak dapat menerima data dan transmisi TCP akan terhenti hingga client dapat memroses data pada receive buffer. Ukuran window TCP merupakan banyaknya data (informasi) yang dapat diterima mesin pada saat sesi TCP dan masih mampu untuk memroses data. Pada saat mesin melakukan inisiasi koneksi TCP pada server, mesin akan memberi tahu server berapa banyak data yang dapat diterima dengan ukuran window.
 
@@ -72,7 +75,7 @@ Ketika sesi TCP sudah terinisiasi dan server mulai mengirimkan data, ukuran wind
 
 Hal ini dapat diatasi dengan cara mencari tahu apa yang sedang dilakukan client sebelum terjadi TCP Zero Window yang bisa saja terjadi diakibatkan oleh terlalu banyaknya proses yang dijalankan pada saat itu. Satu-satunya cara agar receiver dapat menerima data kembali adalah dengan menunggu hingga advertised window tidak bernilai 0.
 
-### Sebutkan field data yang terdapat TCP Header serta ukurannya, ilustrasikan, dan jelaskan kegunaan dari masing-masing field data tersebut!
+**Sebutkan field data yang terdapat TCP Header serta ukurannya, ilustrasikan, dan jelaskan kegunaan dari masing-masing field data tersebut!**
 
 Setiap TCP header memiliki 10 field data dengan total ukuran sebesar 20 bytes (160 bits). TCP header juga dapat menambahkan alokasi data tambahan yang berukuran hingga 40 bytes. Field-field data yang terdapat pada TCP header adalah sebagai berikut.
   1. Source TCP port number (2 bytes).
