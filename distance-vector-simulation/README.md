@@ -2,9 +2,9 @@
 Tugas Besar 2 IF3130 Jaringan Komputer
 
 ## Kelompok Flabby
-1. 13515057 - Erick Wijaya
-2. 13515063 - Kezia Suhendra
-3. 13515111 - Catherine Almira
+1. [13515057 - Erick Wijaya](https://github.com/wijayaerick)
+2. [13515063 - Kezia Suhendra](https://github.com/keziasuhendra)
+3. [13515111 - Catherine Almira](https://github.com/calmira)
 
 ### Petunjuk Penggunaan Program
 1. Lakukan kompilasi program dan jalankan eksekusi program dengan menggunakan *command* berikut pada terminal atau *command prompt*.
