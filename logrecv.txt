@@ -1,0 +1,745 @@
+[ Thu Oct 19 04:08:53 2017 ] UDP Socket created successfully
+[ Thu Oct 19 04:08:53 2017 ] Bind socket succeeded
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: L)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=L to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: ,)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=, to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: c)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=c to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: c)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=c to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: c)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=c to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: g)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=g to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: 
+)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=
+ to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: C)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=C to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: c)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=c to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: c)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=c to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: j)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=j to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: 
+)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=
+ to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: V)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=V to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: f)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=f to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: ,)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=, to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: f)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=f to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: ,)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=, to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: 
+)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=
+ to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: P)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=P to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: c)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=c to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: ,)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=, to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: f)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=f to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: g)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=g to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: 
+)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=
+ to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: P)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=P to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: ,)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=, to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: h)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=h to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: t)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=t to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: d)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=d to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: 
+)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=
+ to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: Q)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=Q to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: q)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=q to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: f)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=f to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: c)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=c to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: ,)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=, to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: v)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=v to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: ,)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=, to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: u)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=u to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-6 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-7 (data: l)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=l to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-8 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-9 (data: m)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=m to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-10 (data: c)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=c to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-11 (data: o)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=o to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-12 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-13 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-14 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-15 (data: r)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=r to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-16 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-17 (data: s)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=s to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-18 (data: a)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=a to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-19 (data: p)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=p to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-0 (data: i)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=i to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-1 (data: e)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=e to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-2 (data: n)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=n to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-3 (data: 
+)
+[ Thu Oct 19 04:08:54 2017 ] Writen data=
+ to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-4 (data:  )
+[ Thu Oct 19 04:08:54 2017 ] Writen data=  to output file
+[ Thu Oct 19 04:08:54 2017 ] Sent ACK with seqnum-5 (data: ˆ)
