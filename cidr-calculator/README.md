@@ -1,7 +1,7 @@
 # CIDR Calculator
 Tugas Kecil 1 IF3130 Jaringan Komputer
 
-Erick Wijaya - 13515057
+[Erick Wijaya - 13515057](https://github.com/wijayaerick)
 
 ## Petunjuk Penggunaan
 1. Ekstrak zip
